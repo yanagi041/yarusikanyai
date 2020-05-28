@@ -1,0 +1,39 @@
+/* ---------------------------------
+variables
+--------------------------------- */
+$site-width: 1024px;
+$font-family_default: "ヒラギノ角ゴシック","Hiragino Sans","メイリオ", "Meiryo", "sans-serif", "Font Awesome 5 Free";
+$font-family-sans-serif: "Nunito", sans-serif;
+$font-family-cat: "Nico Moji";
+$font-size-base: .9rem;
+$line-height-base: 1.6;
+$font-size_xs: 1.2rem;
+$font-size_s: 1.4rem;
+$font-size_m: 1.6rem;
+$font-size_l: 1.8rem;
+$font-size_xl: 2rem;
+$font-size_2l: 2.4rem;
+$font-size_3l: 2.8rem;
+$font-size_4l: 3.2rem;
+$font-size_5l: 3.6rem;
+$font-size_6l: 4rem;
+$space_s: 5px;
+$space_m: 10px;
+$space_l: 15px;
+$space_xl: 20px;
+$space_2l: 25px;
+$space_3l: 30px;
+$space_4l: 40px;
+$space_5l: 50px;
+$space_6l: 60px;
+$space_7l: 70px;
+$space_8l: 80px;
+$breakpoints: (
+  "sm"    : "screen and (max-width: 430px)",
+  "md"    : "screen and (max-width: 559px)",//スマホ
+  "lg"    : "screen and (max-width: 959px)",//ヘッダーが切れる
+  "ex"    : "screen and (max-width: 1139px)",//site-widthのMAX
+) !default;
+$color-dark: #aaa;
+$color-dark-accent: #e8e8e8;
+$color-light: #b17126;

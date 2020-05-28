@@ -1,0 +1,16 @@
+/* ---------------------------------
+c-form
+--------------------------------- */
+.c-form {
+	padding-bottom: $space_2l;
+	padding-top: $space_2l;
+	.c-form__container {
+		display: flex;
+	}
+	.c-form-group {
+		padding-bottom: $space_l;
+		label {
+			text-align: left;
+		}
+	}
+}

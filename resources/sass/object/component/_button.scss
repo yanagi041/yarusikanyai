@@ -1,0 +1,27 @@
+button:hover {
+	opacity: .9;
+}
+
+.btn {
+	border-radius: 8px;
+	box-shadow: 10px 10px 10px -10px;
+	font-size: $font-size_2l;
+	height: 50px;
+	text-align: center;
+	width: 240px;
+}
+
+.btn-login, .btn-reset {
+	background-color: $color-dark;
+	color: white;
+	@extend .btn;
+	:hover {
+		color: black;
+		opacity: .5;
+	}
+}
+
+.c-single-button-group {
+	padding-top: $space_3l;
+	text-align: center;
+}

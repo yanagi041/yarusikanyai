@@ -1,0 +1,17 @@
+{
+    "E-Mail Address": "メールアドレス",
+    "Password": "パスワード",
+    "Task Register": "タスク登録",
+    "Title": "タイトル",
+    "Category": "カテゴリー",
+    "Register": "登録する",
+    "Task List": "タスク一覧",
+    "Do Task": "実行する",
+    "Login": "ログイン",
+    "Go Edit": "編集する",
+    "Deleted": "削除しました",
+    "Go Delete": "削除する",
+    "Invalid operation was performed.": "不正な操作が行われました",
+    "Send Password Reset Link": "送信する",
+    "Reset Password": "パスワードリセット"
+}

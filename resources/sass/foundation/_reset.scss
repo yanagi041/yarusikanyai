@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /*! destyle.css v1.0.11 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 
 /* Reset box-model
@@ -24,12 +22,9 @@
  */
 
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-tap-highlight-color: transparent;
-  /* 3*/
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-tap-highlight-color: transparent; /* 3*/
 }
 
 /* Sections
@@ -111,12 +106,9 @@ dd {
  */
 
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
   border: 0;
   border-top: 1px solid;
   margin: 0;
@@ -130,10 +122,8 @@ hr {
  */
 
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: inherit;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
 }
 
 address {
@@ -159,13 +149,9 @@ a {
  */
 
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -185,10 +171,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: inherit;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
 }
 
 /**
@@ -253,8 +237,7 @@ optgroup,
 select,
 textarea {
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   vertical-align: middle;
   color: inherit;
   font: inherit;
@@ -267,18 +250,16 @@ textarea {
   text-align: inherit;
 }
 
-[type=checkbox] {
+[type='checkbox'] {
   /* 1 */
   -webkit-appearance: checkbox;
-  -moz-appearance: checkbox;
-       appearance: checkbox;
+  appearance: checkbox;
 }
 
-[type=radio] {
+[type='radio'] {
   /* 1 */
   -webkit-appearance: radio;
-  -moz-appearance: radio;
-       appearance: radio;
+  appearance: radio;
 }
 
 /**
@@ -308,19 +289,18 @@ select {
  */
 
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   cursor: pointer;
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
 }
 
 button[disabled],
-[type=button][disabled],
-[type=reset][disabled],
-[type=submit][disabled] {
+[type='button'][disabled],
+[type='reset'][disabled],
+[type='submit'][disabled] {
   cursor: default;
 }
 
@@ -329,9 +309,9 @@ button[disabled],
  */
 
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -341,9 +321,9 @@ button::-moz-focus-inner,
  */
 
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -366,16 +346,11 @@ fieldset {
  */
 
 legend {
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -398,18 +373,17 @@ textarea {
  * 1. Remove the padding in IE 10.
  */
 
-[type=checkbox],
-[type=radio] {
-  padding: 0;
-  /* 1 */
+[type='checkbox'],
+[type='radio'] {
+  padding: 0; /* 1 */
 }
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -417,16 +391,15 @@ textarea {
  * 1. Correct the outline style in Safari.
  */
 
-[type=search] {
-  outline-offset: -2px;
-  /* 1 */
+[type='search'] {
+  outline-offset: -2px; /* 1 */
 }
 
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 
-[type=search]::-webkit-search-decoration {
+[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -436,10 +409,8 @@ textarea {
  */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /**
@@ -509,306 +480,3 @@ template {
 [hidden] {
   display: none;
 }
-
-/* ---------------------------------
-variables
---------------------------------- */
-
-/* ---------------------------------
-mixin
---------------------------------- */
-
-body,
-html {
-  box-sizing: border-box;
-  display: flex;
-  flex-flow: column;
-  font-family: "\30D2\30E9\30AE\30CE\89D2\30B4\30B7\30C3\30AF", "Hiragino Sans", "\30E1\30A4\30EA\30AA", "Meiryo", "sans-serif", "Font Awesome 5 Free";
-  font-size: 62.5%;
-  font-weight: 300;
-  line-height: 1.6;
-  min-height: 100vh;
-  -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%;
-  width: 100%;
-}
-
-h1 {
-  font-size: 3.2rem;
-}
-
-h2 {
-  font-size: 2.4rem;
-  text-align: center;
-}
-
-input[type=text],
-input[type=password],
-input[type=email] {
-  border: 1px solid #e7eaec;
-  font-size: 1.6rem;
-  height: 50px;
-  padding: 10px 20px;
-  width: 100%;
-}
-
-label {
-  font-size: 1.6rem;
-}
-
-input[type=checkbox] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
-  opacity: 0;
-  position: absolute;
-}
-
-input[type=checkbox] + span::before {
-  border: 2px solid #ccc;
-  border-radius: 2px;
-  content: "";
-  display: inline-block;
-  height: 1.3rem;
-  margin-right: 0.5rem;
-  position: relative;
-  top: 1px;
-  width: 1.3rem;
-}
-
-input[type=checkbox]:checked + span::before {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpolyline fill='none' stroke='%230bd' stroke-width='3' points='2,7.3 7.3,12.7 18,2 '/%3E%3C/svg%3E");
-  background-position: 0 2px;
-  background-repeat: no-repeat;
-}
-
-.sp {
-  display: none;
-}
-
-@media screen and (max-width: 559px) {
-  .sp {
-    display: block;
-  }
-}
-
-.l-header {
-  align-items: center;
-  background: #aaa;
-  display: flex;
-  height: 60px;
-  justify-content: center;
-  padding: 10px 15px;
-  position: fixed;
-  width: 100%;
-}
-
-.l-header h1 {
-  color: white;
-  font-family: "Nico Moji";
-}
-
-.l-header .logo img {
-  height: 45px;
-  width: 45px;
-}
-
-.l-header__menu {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 60px;
-}
-
-.l-header__menu__line {
-  cursor: pointer;
-  height: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15px;
-  position: relative;
-  width: 36px;
-}
-
-.l-header__menu__line span {
-  background: #333;
-  border-radius: 6px;
-  display: block;
-  height: 4px;
-  position: absolute;
-  transition: 0.6s;
-  width: 100%;
-}
-
-.l-header__menu__line span:first-child {
-  top: 0;
-}
-
-.l-header__menu__line span:nth-child(2) {
-  top: 13px;
-}
-
-.l-header__menu__line span:last-child {
-  bottom: 0;
-}
-
-.l-header__menu__line.active span {
-  transition: 0.6s;
-}
-
-.l-header__menu__line.active span:first-child {
-  top: 50%;
-  transform: rotate(45deg);
-}
-
-.l-header__menu__line.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.l-header__menu__line.active span:last-child {
-  top: 50%;
-  transform: rotate(-45deg);
-}
-
-.navi {
-  align-items: center;
-  color: #fff;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  width: 100%;
-}
-
-.navi__wrap {
-  background: #4b4b4b;
-  list-style-type: none;
-  padding: 60px 0;
-  padding-left: 0;
-  position: absolute;
-  right: 0px;
-  text-align: center;
-  top: 60px;
-}
-
-.navi__wrap li a {
-  color: #fff;
-  display: block;
-  font-size: 2.4rem;
-  padding: 10px 100px;
-  text-decoration: none;
-}
-
-.navi-enter,
-.navi-leave-to {
-  opacity: 0;
-}
-
-.navi-enter-to,
-.navi-leave {
-  opacity: 1;
-}
-
-.navi-enter-active,
-.navi-leave-active {
-  transition: 0.6s;
-}
-
-.l-footer {
-  align-items: center;
-  background: #aaa;
-  display: flex;
-  height: 30px;
-  justify-content: center;
-  padding: 10px;
-  width: 100%;
-}
-
-.l-main {
-  display: flex;
-  margin: 0 auto;
-  max-width: 1040px;
-  min-height: calc(100vh - 30px);
-  padding: 100px 40px 40px;
-}
-
-.l-main__inner {
-  width: 100%;
-}
-
-.l-main__base {
-  display: flex;
-  flex-direction: column;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-.btn,
-.btn-login,
-.btn-reset {
-  border-radius: 8px;
-  box-shadow: 10px 10px 10px -10px;
-  font-size: 2.4rem;
-  height: 50px;
-  text-align: center;
-  width: 240px;
-}
-
-.btn-login,
-.btn-reset {
-  background-color: #aaa;
-  color: white;
-}
-
-.btn-login :hover,
-.btn-reset :hover {
-  color: black;
-  opacity: 0.5;
-}
-
-.c-single-button-group {
-  padding-top: 30px;
-  text-align: center;
-}
-
-/* ---------------------------------
-c-form
---------------------------------- */
-
-.c-form {
-  padding-bottom: 25px;
-  padding-top: 25px;
-}
-
-.c-form .c-form__container {
-  display: flex;
-}
-
-.c-form .c-form-group {
-  padding-bottom: 15px;
-}
-
-.c-form .c-form-group label {
-  text-align: left;
-}
-
-.p-login {
-  width: 100%;
-}
-
-.p-login__btn-group {
-  padding-top: 30px;
-  text-align: center;
-}
-
-.p-login__link {
-  padding-top: 15px;
-}
-
-.p-login__link a {
-  font-size: 1.4rem;
-}
-

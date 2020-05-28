@@ -1,0 +1,111 @@
+// /* ---------------------------------
+// header
+// --------------------------------- */
+
+.l-header {
+	align-items: center;
+	background: $color-dark;
+	display: flex;
+	height: 60px;
+	justify-content: center;
+	padding: $space_m $space_l;
+	position: fixed;
+	width: 100%;
+	h1 {
+		color: white;
+		font-family: "Nico Moji";
+	}
+	.logo {
+		img {
+			height: 45px;
+			width: 45px;
+		}
+	}
+	&__menu {
+		position: fixed;
+		right: 0;
+		top: 0;
+		width: 60px;
+		&__line {
+			cursor: pointer;
+			height: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 15px;
+			position: relative;
+			width: 36px;
+			span {
+				background: #333;
+				border-radius: 6px;
+				display: block;
+				height: 4px;
+				position: absolute;
+				transition: .6s;
+				width: 100%;
+				&:first-child {
+					top: 0;
+				}
+				&:nth-child(2) {
+					top: 13px;
+				}
+				&:last-child {
+					bottom: 0;
+				}
+			}
+			&.active {
+				span {
+					transition: .6s;
+					&:first-child {
+						top: 50%;
+						transform: rotate(45deg);
+					}
+					&:nth-child(2) {
+						opacity: 0;
+					}
+					&:last-child {
+						top: 50%;
+						transform: rotate(-45deg);
+					}
+				}
+			}
+		}
+	}
+}
+
+.navi {
+	align-items: center;
+	color: #fff;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	width: 100%;
+	&__wrap {
+		background: #4b4b4b;
+		list-style-type: none;
+		padding: 60px 0;
+		padding-left: 0;
+		position: absolute;
+		right: 0px;
+		text-align: center;
+		top: 60px;
+
+		li {
+			a {
+				color: #fff;
+				display: block;
+				font-size: $font-size_2l;
+				padding: 10px 100px;
+				text-decoration: none;
+			}
+		}
+	}
+	&-enter, &-leave-to {
+		opacity: 0;
+	}
+	&-enter-to, &-leave {
+		opacity: 1;
+	}
+	&-enter-active, &-leave-active {
+		transition: .6s;
+	}
+}
