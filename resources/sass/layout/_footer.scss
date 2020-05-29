@@ -11,3 +11,10 @@
 	padding: $space_m;
 	width: 100%;
 }
+
+.l-footer-light {
+	background: $color-light;
+	span {
+		background: $color-light-accent;
+	}
+}

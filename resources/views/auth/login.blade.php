@@ -2,8 +2,11 @@
 
 @section('title','ログイン')
 
-@section('content')
+@section('header')
+<header-component></header-component>
+@endsection
 
+@section('content')
 <div class="p-login">
 
     <h2>{{ __('Login') }}</h2>
@@ -60,18 +63,17 @@
             <div class="c-form-group">
                 <div class="c-single-button-group">
                     <div>
-                        <button type="submit" class="btn-login">
+                        <button type="submit" class="btn-dark">
                             {{ __('Login') }}
                         </button>
-                        <div class="p-login__link">
+                        <div class="c-link__under-button">
                             @if (Route::has('password.request'))
-                            <a class="btn-link" href="{{ route('password.request') }}">
+                            <a href="{{ route('password.request') }}">
                                 {{ __('パスワードをお忘れの方') }}
                             </a>
                             @endif
                         </div>
                     </div>
-
                 </div>
             </div>
 

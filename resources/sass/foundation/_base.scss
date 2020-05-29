@@ -1,6 +1,6 @@
-// /* ---------------------------------
+//====================================
 // base
-// --------------------------------- */
+//====================================
 
 body, html {
 	box-sizing: border-box;
@@ -101,4 +101,33 @@ input[type=checkbox]:checked + span::before {
 	@include mq() {
 		display: block;
 	}
+}
+
+//====================================
+//プレースホルダーの色変更
+/* 標準版 */
+:placeholder-shown {
+	color: #b0b0b0;
+}
+
+/* Google Chrome, Safari, Opera 15+, Android, iOS */
+::-webkit-input-placeholder {
+	color: #b0b0b0;
+}
+
+/* Firefox 18- */
+:-moz-placeholder {
+	color: #b0b0b0;
+	opacity: 1;
+}     
+
+/* Firefox 19+ */
+::-moz-placeholder {
+	color: #b0b0b0;
+	opacity: 1;
+}
+
+/* IE 10+ */
+:-ms-input-placeholder {
+	color: #b0b0b0;
 }

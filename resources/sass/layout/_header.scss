@@ -109,3 +109,10 @@
 		transition: .6s;
 	}
 }
+
+.l-header-light {
+	background: $color-light;
+	span {
+		background: $color-light-accent;
+	}
+}

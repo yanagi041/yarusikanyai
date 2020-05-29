@@ -523,7 +523,7 @@ html {
   box-sizing: border-box;
   display: flex;
   flex-flow: column;
-  font-family: "\30D2\30E9\30AE\30CE\89D2\30B4\30B7\30C3\30AF", "Hiragino Sans", "\30E1\30A4\30EA\30AA", "Meiryo", "sans-serif", "Font Awesome 5 Free";
+  font-family: "M PLUS Rounded 1c", "\30D2\30E9\30AE\30CE\89D2\30B4\30B7\30C3\30AF", "Hiragino Sans", "\30E1\30A4\30EA\30AA", "Meiryo", "sans-serif", "Font Awesome 5 Free";
   font-size: 62.5%;
   font-weight: 300;
   line-height: 1.6;
@@ -592,6 +592,46 @@ input[type=checkbox]:checked + span::before {
   .sp {
     display: block;
   }
+}
+
+/* 標準版 */
+
+:-moz-placeholder-shown {
+  color: #b0b0b0;
+}
+
+:-ms-input-placeholder {
+  color: #b0b0b0;
+}
+
+:placeholder-shown {
+  color: #b0b0b0;
+}
+
+/* Google Chrome, Safari, Opera 15+, Android, iOS */
+
+::-webkit-input-placeholder {
+  color: #b0b0b0;
+}
+
+/* Firefox 18- */
+
+:-moz-placeholder {
+  color: #b0b0b0;
+  opacity: 1;
+}
+
+/* Firefox 19+ */
+
+::-moz-placeholder {
+  color: #b0b0b0;
+  opacity: 1;
+}
+
+/* IE 10+ */
+
+:-ms-input-placeholder {
+  color: #b0b0b0;
 }
 
 .l-header {
@@ -715,6 +755,14 @@ input[type=checkbox]:checked + span::before {
   transition: 0.6s;
 }
 
+.l-header-light {
+  background: #b17126;
+}
+
+.l-header-light span {
+  background: #ffedcc;
+}
+
 .l-footer {
   align-items: center;
   background: #aaa;
@@ -723,6 +771,14 @@ input[type=checkbox]:checked + span::before {
   justify-content: center;
   padding: 10px;
   width: 100%;
+}
+
+.l-footer-light {
+  background: #b17126;
+}
+
+.l-footer-light span {
+  background: #ffedcc;
 }
 
 .l-main {
@@ -747,8 +803,8 @@ button:hover {
 }
 
 .btn,
-.btn-login,
-.btn-reset {
+.btn-light,
+.btn-dark {
   border-radius: 8px;
   box-shadow: 10px 10px 10px -10px;
   font-size: 2.4rem;
@@ -757,21 +813,43 @@ button:hover {
   width: 240px;
 }
 
-.btn-login,
-.btn-reset {
+.btn :hover,
+.btn-light :hover,
+.btn-dark :hover {
+  opacity: 0.5;
+}
+
+.btn-dark {
   background-color: #aaa;
   color: white;
 }
 
-.btn-login :hover,
-.btn-reset :hover {
-  color: black;
-  opacity: 0.5;
+.btn-light {
+  background-color: #b17126;
+  color: white;
 }
 
 .c-single-button-group {
   padding-top: 30px;
   text-align: center;
+}
+
+.c-double-button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.c-wrapper-button {
+  margin: 0 15px;
+  width: 50%;
+}
+
+.c-wrapper-button .btn-dark,
+.c-wrapper-button .btn-light {
+  width: 100%;
 }
 
 /* ---------------------------------
@@ -795,6 +873,20 @@ c-form
   text-align: left;
 }
 
+/* ---------------------------------
+c-link__under-button
+--------------------------------- */
+
+.c-link__under-button {
+  padding-top: 25px;
+  text-align: center;
+}
+
+.c-link__under-button a {
+  font-size: 1.6rem;
+  text-decoration: underline;
+}
+
 .p-login {
   width: 100%;
 }
@@ -804,11 +896,7 @@ c-form
   text-align: center;
 }
 
-.p-login__link {
-  padding-top: 15px;
-}
-
-.p-login__link a {
-  font-size: 1.4rem;
+.p-tasks-new .p-single-task {
+  padding-bottom: 30px;
 }
 

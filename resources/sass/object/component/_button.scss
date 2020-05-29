@@ -9,19 +9,40 @@ button:hover {
 	height: 50px;
 	text-align: center;
 	width: 240px;
+	:hover {
+		opacity: .5;
+	}
 }
 
-.btn-login, .btn-reset {
+.btn-dark {
 	background-color: $color-dark;
 	color: white;
 	@extend .btn;
-	:hover {
-		color: black;
-		opacity: .5;
-	}
+}
+
+.btn-light {
+	background-color: $color-light;
+	color: white;
+	@extend .btn;
 }
 
 .c-single-button-group {
 	padding-top: $space_3l;
 	text-align: center;
+}
+
+.c-double-button-group {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding-top: $space_3l;
+	text-align: center;
+}
+
+.c-wrapper-button {
+	margin: 0 $space_l;
+	width: 50%;
+	.btn-dark, .btn-light {
+		width: 100%;
+	}
 }

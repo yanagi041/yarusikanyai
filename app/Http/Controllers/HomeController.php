@@ -23,6 +23,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('mypage');
+    }
+
+    public function profile()
+    {
+        return view('profile');
+    }
+
+    public function editEmail()
+    {
+        return view('edit-email');
+    }
+
+    public function editPass()
+    {
+        return view('edit-pass');
     }
 }

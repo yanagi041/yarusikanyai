@@ -36,7 +36,7 @@
 
                             <div class="c-form-group">
                                 <div class="c-single-button-group">
-                                    <button type="submit" class="btn-reset">
+                                    <button type="submit" class="c-btn-dark">
                                         {{ __('Send Password Reset Link') }}
                                     </button>
                                 </div>

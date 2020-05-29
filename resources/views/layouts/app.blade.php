@@ -15,6 +15,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -22,7 +23,9 @@
 
 <body>
     <div id="app" class="wrapper--main">
-        <header-component></header-component>
+        <!-- header-component -->
+        @yield('header')
+        <!-- header-component end -->
         <div class="l-main">
             <div class="l-main__inner">
                 <div class="l-main__base">
@@ -34,7 +37,7 @@
         </div>
         <!-- フラッシュメッセージ -->
         <!-- フラッシュメッセージ end -->
-        <footer-component></footer-component>
+        @yield('footer')
     </div>
 
     <!-- Scripts -->
