@@ -1,0 +1,12 @@
+.p-tasks-doing {
+	&__doing-task {
+		font-size: $font-size_6l;
+		padding-top: $space_2l;
+		text-align: center;
+
+		p {
+			font-size: $font-size_l;
+			padding-top: $space_2l;
+		}
+	}
+}

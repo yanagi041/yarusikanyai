@@ -1,0 +1,17 @@
+.p-tasks-prepare {
+	margin: 0 auto;
+	width: 80%;
+	.c-task-list {
+		margin-top: $space_2l;
+	}
+	.p-task-prepare__tasks {
+		margin-top: $space_2l;
+	}
+	.c-task-list {
+		&__item {
+			border: 1px solid #e7eaec;
+			@include form;
+			margin: 0 auto;
+		}
+	}
+}

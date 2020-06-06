@@ -1,0 +1,20 @@
+//====================================
+//c-flash
+//====================================
+.c-flash {
+	align-items: center;
+	background: antiquewhite;
+	color: #333;
+	display: flex;
+	font-size: $font-size_l;
+	height: 35px;
+	justify-content: center;
+	opacity: 0;
+	position: fixed;
+	top: 60px;
+	transition: all .4s;
+	width: 100%;
+	&.is-active {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,14 @@
+.p-tasks-mypage {
+	&__notask {
+		padding-top: $space_5l;
+		text-align: center;
+		p {
+			font-size: $font-size_l;
+		}
+	}
+	.c-task-list {
+		&__item {
+			border: 1px solid #e7eaec;
+		}
+	}
+}

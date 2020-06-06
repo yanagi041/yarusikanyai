@@ -1,0 +1,16 @@
+.p-tasks-history {
+	&__achievement {
+		padding: $space-2l 0 $space-l;
+	}
+	&__achievement-item {
+		display: flex;
+		font-size: $font-size_2l;
+		justify-content: space-around;
+		img {
+			width: 60px;
+		}
+		p {
+			font-size: $font-size_s;
+		}
+	}
+}

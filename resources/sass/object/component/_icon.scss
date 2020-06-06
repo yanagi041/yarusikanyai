@@ -1,0 +1,25 @@
+//====================================
+//icon
+//====================================
+@mixin icon {
+	font-size: $font-size_l;
+	margin-left: 15px;
+}
+
+//ゴミ箱
+.fa-trash-alt, .fa-edit {
+	color: $color-dark;
+	@include icon;
+}
+
+//入替えアイコン
+.fa-bars {
+	color: $color-light;
+	@include icon;
+}
+
+//猫の足跡
+.fa-paw {
+	color: $color-light;
+	font-size: $font-size_l;
+}
