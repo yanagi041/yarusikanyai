@@ -1,15 +1,29 @@
 @extends('layouts.app')
 
-@section('title','タスク実行')
+@section('title','タスク作成')
 
 @section('header')
-<div class="l-header-light">
-    <header-component></header-component>
-</div>
+<header-component class="l-header-light"></header-component>
 @endsection
 
+
 @section('content')
-<div class="p-do"></div>
+<div class="p-tasks-complete">
+    <h2>タスク完了！</h2>
+    <div class="p-tasks-complete__img">
+        <img src="/img/happycat.png" alt="cat">
+    </div>
+    <div class="c-single-button-group">
+        <div class="c-wrapper-button">
+            <a href="{{ route('mypage') }}">
+                <div class="btn-light">
+                    マイページ
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
 @endsection
 
 @section('footer')

@@ -7,24 +7,63 @@
 @endsection
 
 @section('content')
-<div class="p-mypage">
+<div class="p-tasks-mypage">
     <h2>今日やること</h2>
     @if (session('status'))
     <div class="alert alert-success" role="alert">
         {{ session('status') }}
     </div>
     @endif
-    <p style="padding: 10px 15px 0px;"> ここにタスクを表示。ボタン形式にする？</p>
+
+    @if ($tasks->isEmpty())
+    <div class="p-tasks-mypage__notask">
+        <p>現在登録しているタスクはありません</p>
+    </div>
+    @endif
+
+    <!-- タスクリスト -->
+    <div class="c-task-list">
+        <ul>
+            @foreach($tasks as $task)
+
+            <li class="c-task-list__item">
+                <a href="{{ route('tasks.prepare', $task -> id) }}">
+                    <p> <i class="fas fa-paw"></i>
+                        {{ $task -> title }}
+                    </p>
+                </a>
+
+                <div class="c-task-list__item-group">
+                    <form action="{{ route('tasks.edit', $task->id ) }}" method="get">
+                        @csrf
+                        <button type="submit"> <i class="fas fa-edit"></i>
+                        </button>
+                    </form>
+                    <form action="{{ route('tasks.delete',$task->id ) }}" method="post">
+                        @csrf
+                        <button type="submit" onclick='return confirm("削除しますか？");'><i
+                                class="fas fa-trash-alt"></i></button>
+                    </form>
+                </div>
+
+            </li> @endforeach
+        </ul>
+    </div>
+
     <div class="c-double-button-group">
         <div class="c-wrapper-button">
-            <button class="btn-dark">
-                <a href="{{ route('tasks.new') }}">{{ __('Make') }}</a>
-            </button>
+            <a href="{{ route('tasks.new') }}">
+                <div class="btn-dark">
+                    {{ __('Make') }}
+                </div>
+            </a>
         </div>
         <div class="c-wrapper-button">
-            <button class="btn-dark">
-                <a href="{{ route('tasks.history') }}">{{ __('History') }}</a>
-            </button>
+            <a href="{{ route('tasks.history') }}">
+                <div class="btn-dark">
+                    {{ __('History') }}
+                </div>
+            </a>
         </div>
     </div>
     <div class="c-link__under-button">

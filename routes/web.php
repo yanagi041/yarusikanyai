@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use Illuminate\Support\Facades\Auth;
 
 //authで作られたコントローラー
 Route::get('/', function () {
@@ -23,9 +23,27 @@ Route::get('/mypage', 'HomeController@index')->name('mypage');
 Route::get('/', 'HomeController@index')->name('mypage');
 
 //ログイン必要
-Route::get('/profile', 'HomeController@profile')->name('profile');
-Route::get('/edit-email', 'HomeController@editEmail')->name('edit-email');
-Route::get('/edit-pass', 'HomeController@editPass')->name('edit-pass');
-Route::get('/tasks/new', 'TasksController@new')->name('tasks.new');
-Route::post('/tasks', 'TasksController@new')->name('tasks.create');
-Route::get('/tasks/history', 'TasksController@history')->name('tasks.history');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', 'TasksController@mypage')->name('mypage');
+    Route::get('/mypage', 'TasksController@mypage')->name('mypage');
+
+    //ユーザー周り
+    Route::get('/profile', 'HomeController@profile')->name('profile');
+    Route::get('/edit-email', 'HomeController@editEmail')->name('edit-email');
+    Route::get('/edit-pass', 'HomeController@editPass')->name('edit-pass');
+    Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+   
+    //tasks周り
+    Route::post('/tasks', 'TasksController@new')->name('tasks.create');
+    Route::get('/tasks/new', 'TasksController@new')->name('tasks.new');
+    Route::post('/tasks/new', 'TasksController@create')->name('tasks.create');
+    Route::get('/tasks/{id}/edit', 'TasksController@edit')->name('tasks.edit');
+    Route::post('/tasks/{id}/edit', 'TasksController@update')->name('tasks.update');
+    Route::post('/tasks/{id}/delete', 'TasksController@delete')->name('tasks.delete');
+    Route::get('/tasks/{id}/prepare', 'TasksController@prepare')->name('tasks.prepare');
+    Route::post('/tasks/{id}/start', 'TasksController@start')->name('tasks.start');
+    Route::get('/tasks/{id}/doing', 'TasksController@doing')->name('tasks.doing');
+    Route::post('/tasks/{id}/finishFlg', 'TasksController@finishFlg')->name('tasks.finishFlg');
+    Route::get('/tasks/{id}/complete', 'TasksController@complete')->name('tasks.complete');
+    Route::get('/tasks/history', 'TasksController@history')->name('tasks.history');
+});

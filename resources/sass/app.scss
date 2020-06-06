@@ -23,18 +23,25 @@
 // -----------------------------------------------------------------
 // Component
 // -----------------------------------------------------------------
-@import "object/component/_accordion";
 @import "object/component/_button";
+@import "object/component/_flash";
 @import "object/component/_form";
+@import "object/component/_icon";
 @import "object/component/_link__under-button";
+@import "object/component/_task-list";
+
 
 // -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------
-@import "object/project/_hero";
 @import "object/project/_login";
 @import "object/project/_spheadermenu";
+@import "object/project/_tasks__complete";
+@import "object/project/_tasks__doing";
+@import "object/project/_tasks__history";
+@import "object/project/_tasks__mypage";
 @import "object/project/_tasks__new";
+@import "object/project/_tasks__prepare";
 
 // -----------------------------------------------------------------
 // Utility

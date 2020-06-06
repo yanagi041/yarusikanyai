@@ -1,9 +1,12 @@
-/* ---------------------------------
-c-link__under-button
---------------------------------- */
+//====================================
+//c-link__under-button
+//====================================
 .c-link__under-button {
 	padding-top: $space_2l;
 	text-align: center;
+	&__link {
+		padding-top: $space_2l;
+	}
 	a {
 		font-size: $font-size_m;
 		text-decoration: underline;

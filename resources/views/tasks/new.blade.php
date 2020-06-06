@@ -15,15 +15,15 @@
 
             <!-- 大タスク -->
             <div class="p-single-task">
-                <label for="big-task">{{ __('Big Task') }}</label>
-                <div class="c-form-group">
-                    <div class="">
-                        <input id="big-task" type="text" name="big-task" value="{{ old('big-task') }}"
-                            placeholder="例:部屋の片付けを終わらせる" autocomplete="big-task" autofocus>
-                        @error('big-task')
-                        <span role="alert">
+                <label for="title">{{ __('Big Task') }}</label>
+                <div class="c-form__group">
+                    <div>
+                        <input id="title" type="text" name="title" value="{{ old('title') }}"
+                            placeholder="例:部屋の片付けを終わらせる" autocomplete="title" autofocus>
+                        @error('title')
+                        <p class="c-form__error">
                             <strong>{{ $message }}</strong>
-                        </span>
+                        </p>
                         @enderror
                     </div>
                 </div>
@@ -32,27 +32,32 @@
 
             <!-- 小タスク -->
             <div class="c-task-list">
-                <label for="small-task">{{ __('Small Task') }}</label>
-                @for($i = 1; $i <= 5; $i++) <div class="c-form-group">
-                    <div class="">
-                        <input id="big-task" type="text" name="big-task" value="{{ old('big-task') }}"
-                            placeholder="例:片付ける部屋を決める/片付ける場所を決める/ゴミ袋を持ってくる..." autocomplete="big-task" autofocus>
-                        @error('small-task')
-                        <span role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
+                <label for="">{{ __('Small Task') }}</label>
+                @for($i = 1; $i <= 5; $i++) <div class="c-form__group">
+                    <label for="task{{$i - 1}}"></label>
+                    <ul>
+                        <li>
+                            <input id="task{{$i - 1}}" type="text" name="task{{$i - 1}}"
+                                value="{{old('task'.($i - 1))}}" placeholder="分割タスク{{ $i }}"
+                                autocomplete="task{{$i - 1}}" autofocus>
+                            @error('task'.($i - 1))
+                            <p class="c-form__error">
+                                <strong>{{ $message }}</strong>
+                            </p>
+                            @enderror
+                        </li>
+                    </ul>
             </div>
             @endfor
     </div>
     <!-- 小タスク end -->
 
-    <div class="c-form-group">
+    <div class="c-form__group">
         <div class="c-single-button-group">
             <button type="submit" class="btn-light">{{ __('Register') }}</button>
         </div>
     </div>
+    </form>
 
 </div>
 

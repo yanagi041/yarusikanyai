@@ -18,7 +18,7 @@
           <nav class="navi" v-show="navi">
             <ul class="navi__wrap">
               <li>
-                <a href="#">AAA</a>
+                <a href="logout">ログアウト</a>
               </li>
               <li>
                 <a href="#">BBB</a>

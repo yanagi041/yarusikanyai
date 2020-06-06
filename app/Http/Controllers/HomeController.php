@@ -26,6 +26,18 @@ class HomeController extends Controller
         return view('mypage');
     }
 
+    // public function index($id)
+    // {
+    //     if (!ctype_digit($id)) {
+    //         return redirect('/mypage')->with('flash_message', __('Invalid opration was performed.'));
+    //     }
+        
+    //     $task = Auth::user()->tasks()->find($id);
+    //     return view('mypage', ['task' => $task]);
+    // }
+
+
+
     public function profile()
     {
         return view('profile');

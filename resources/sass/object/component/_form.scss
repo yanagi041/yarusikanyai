@@ -1,16 +1,20 @@
-/* ---------------------------------
-c-form
---------------------------------- */
+//====================================
+//c-form
+//====================================
 .c-form {
 	padding-bottom: $space_2l;
 	padding-top: $space_2l;
-	.c-form__container {
+	&__container {
 		display: flex;
 	}
-	.c-form-group {
+	&__group {
 		padding-bottom: $space_l;
 		label {
 			text-align: left;
 		}
+	}
+	&__error {
+		color: red;
+		font-size: $font-size_s;
 	}
 }

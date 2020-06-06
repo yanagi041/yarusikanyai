@@ -21,6 +21,10 @@
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0",
         "vue": "^2.5.17",
-        "vue-template-compiler": "^2.6.11"
+        "vue-template-compiler": "^2.6.11",
+        "webpack": "^4.43.0"
+    },
+    "dependencies": {
+        "vuedraggable": "^2.23.2"
     }
 }

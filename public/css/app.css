@@ -544,6 +544,10 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  font-size: 1.8rem;
+}
+
 input[type=text],
 input[type=password],
 input[type=email] {
@@ -592,6 +596,23 @@ input[type=checkbox]:checked + span::before {
   .sp {
     display: block;
   }
+}
+
+.pagination {
+  bottom: 0px;
+  display: flex;
+  font-size: 1.8rem;
+  justify-content: center;
+}
+
+.pagination .page-item {
+  background-color: #aaa;
+  margin: 0 5px;
+  padding: 0 5px;
+}
+
+.pagination .active {
+  background-color: #b17126;
 }
 
 /* 標準版 */
@@ -723,7 +744,9 @@ input[type=checkbox]:checked + span::before {
 
 .navi__wrap {
   background: #4b4b4b;
+  height: calc(100% - 135px);
   list-style-type: none;
+  min-width: 320px;
   padding: 60px 0;
   padding-left: 0;
   position: absolute;
@@ -784,9 +807,9 @@ input[type=checkbox]:checked + span::before {
 .l-main {
   display: flex;
   margin: 0 auto;
-  max-width: 1040px;
+  max-width: 740px;
   min-height: calc(100vh - 30px);
-  padding: 100px 40px 40px;
+  padding: 120px 40px 40px;
 }
 
 .l-main__inner {
@@ -805,10 +828,13 @@ button:hover {
 .btn,
 .btn-light,
 .btn-dark {
+  align-items: center;
   border-radius: 8px;
   box-shadow: 10px 10px 10px -10px;
+  display: flex;
   font-size: 2.4rem;
   height: 50px;
+  justify-content: center;
   text-align: center;
   width: 240px;
 }
@@ -830,21 +856,21 @@ button:hover {
 }
 
 .c-single-button-group {
+  display: flex;
+  justify-content: center;
   padding-top: 30px;
-  text-align: center;
 }
 
 .c-double-button-group {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-top: 30px;
   text-align: center;
 }
 
 .c-wrapper-button {
-  margin: 0 15px;
-  width: 50%;
+  width: 45%;
 }
 
 .c-wrapper-button .btn-dark,
@@ -852,39 +878,99 @@ button:hover {
   width: 100%;
 }
 
-/* ---------------------------------
-c-form
---------------------------------- */
+.c-flash {
+  align-items: center;
+  background: antiquewhite;
+  color: #333;
+  display: flex;
+  font-size: 1.8rem;
+  height: 35px;
+  justify-content: center;
+  opacity: 0;
+  position: fixed;
+  top: 60px;
+  transition: all 0.4s;
+  width: 100%;
+}
+
+.c-flash.is-active {
+  opacity: 1;
+}
 
 .c-form {
   padding-bottom: 25px;
   padding-top: 25px;
 }
 
-.c-form .c-form__container {
+.c-form__container {
   display: flex;
 }
 
-.c-form .c-form-group {
+.c-form__group {
   padding-bottom: 15px;
 }
 
-.c-form .c-form-group label {
+.c-form__group label {
   text-align: left;
 }
 
-/* ---------------------------------
-c-link__under-button
---------------------------------- */
+.c-form__error {
+  color: red;
+  font-size: 1.4rem;
+}
+
+.fa-trash-alt,
+.fa-edit {
+  color: #aaa;
+  font-size: 1.8rem;
+  margin-left: 15px;
+}
+
+.fa-bars {
+  color: #b17126;
+  font-size: 1.8rem;
+  margin-left: 15px;
+}
+
+.fa-paw {
+  color: #b17126;
+  font-size: 1.8rem;
+}
 
 .c-link__under-button {
   padding-top: 25px;
   text-align: center;
 }
 
+.c-link__under-button__link {
+  padding-top: 25px;
+}
+
 .c-link__under-button a {
   font-size: 1.6rem;
   text-decoration: underline;
+}
+
+.c-task-list__item {
+  align-items: center;
+  background: white;
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+}
+
+.c-task-list__item p {
+  font-size: 1.8rem;
+}
+
+.c-task-list__item a {
+  width: 100%;
+}
+
+.c-task-list__item-group {
+  display: flex;
 }
 
 .p-login {
@@ -896,7 +982,80 @@ c-link__under-button
   text-align: center;
 }
 
+.p-tasks-complete__img {
+  text-align: center;
+}
+
+.p-tasks-complete__img img {
+  width: 300px;
+}
+
+.p-tasks-doing__doing-task {
+  font-size: 4rem;
+  padding-top: 25px;
+  text-align: center;
+}
+
+.p-tasks-doing__doing-task p {
+  font-size: 1.8rem;
+  padding-top: 25px;
+}
+
+.p-tasks-history__achievement {
+  padding: 25px 0 15px;
+}
+
+.p-tasks-history__achievement-item {
+  display: flex;
+  font-size: 2.4rem;
+  justify-content: space-around;
+}
+
+.p-tasks-history__achievement-item img {
+  width: 60px;
+}
+
+.p-tasks-history__achievement-item p {
+  font-size: 1.4rem;
+}
+
+.p-tasks-mypage__notask {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.p-tasks-mypage__notask p {
+  font-size: 1.8rem;
+}
+
+.p-tasks-mypage .c-task-list__item {
+  border: 1px solid #e7eaec;
+}
+
 .p-tasks-new .p-single-task {
   padding-bottom: 30px;
+}
+
+.p-tasks-prepare {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.p-tasks-prepare .c-task-list {
+  margin-top: 25px;
+}
+
+.p-tasks-prepare .p-task-prepare__tasks {
+  margin-top: 25px;
+}
+
+.p-tasks-prepare .c-task-list__item {
+  border: 1px solid #e7eaec;
+  border: 1px solid #e7eaec;
+  font-size: 1.6rem;
+  height: 50px;
+  padding: 10px 20px;
+  width: 100%;
+  margin: 0 auto;
 }
 

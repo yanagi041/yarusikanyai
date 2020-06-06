@@ -17,8 +17,12 @@ class CreateTasksTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id');
             $table->string('title');
+            $table->string('task0');
+            $table->string('task1')->nullable();
+            $table->string('task2')->nullable();
+            $table->string('task3')->nullable();
+            $table->string('task4')->nullable();
             $table->boolean('is_finished');
-            $table->string('category');
             $table->timestamps();
         });
     }

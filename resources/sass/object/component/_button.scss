@@ -1,12 +1,19 @@
+//====================================
+// button
+//====================================
+
 button:hover {
 	opacity: .9;
 }
 
 .btn {
+	align-items: center;
 	border-radius: 8px;
 	box-shadow: 10px 10px 10px -10px;
+	display: flex;
 	font-size: $font-size_2l;
 	height: 50px;
+	justify-content: center;
 	text-align: center;
 	width: 240px;
 	:hover {
@@ -27,21 +34,21 @@ button:hover {
 }
 
 .c-single-button-group {
+	display: flex;
+	justify-content: center;
 	padding-top: $space_3l;
-	text-align: center;
 }
 
 .c-double-button-group {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	padding-top: $space_3l;
 	text-align: center;
 }
 
 .c-wrapper-button {
-	margin: 0 $space_l;
-	width: 50%;
+	width: 45%;
 	.btn-dark, .btn-light {
 		width: 100%;
 	}

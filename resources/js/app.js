@@ -19,8 +19,10 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('header-component', require('./components/HeaderComponent.vue').default);
+Vue.component('doing-component', require('./components/DoingComponent.vue').default);
 Vue.component('footer-component', require('./components/FooterComponent.vue').default);
+Vue.component('header-component', require('./components/HeaderComponent.vue').default);
+Vue.component('prepare-component', require('./components/PrepareComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -30,4 +32,19 @@ Vue.component('footer-component', require('./components/FooterComponent.vue').de
 
 const app = new Vue({
     el: '#app',
+    data: {
+        isActive: true
+    },
+    props: {},
+    mounted: function () {
+        this.isActive = true
+        //マウント後1.5秒経ったらeraseMessageを呼ぶ
+        setTimeout(this.eraseMessage, 1500)
+    },
+    methods: {
+        //フラッシュメッセージを見えなくする
+        eraseMessage: function () {
+            this.isActive = false
+        }
+    }
 });

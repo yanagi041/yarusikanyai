@@ -14,7 +14,7 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
-            <div class="c-form-group">
+            <div class="c-form__group">
                 <label for="email">{{ __('E-Mail Address')
                     }}</label>
                 <div>
@@ -30,7 +30,7 @@
                 </div>
             </div>
 
-            <div class="c-form-group">
+            <div class="c-form__group">
                 <label for="password">{{ __('Password')
                     }}</label>
 
@@ -45,10 +45,9 @@
                     </span>
                     @enderror
                 </div>
-
             </div>
 
-            <div class="c-form-group">
+            <div class="c-form__group">
                 <div>
                     <div class="form-check">
                         <label class="form-check-label" for="remember">
@@ -60,18 +59,25 @@
                 </div>
             </div>
 
-            <div class="c-form-group">
+            <div class="c-form__group">
                 <div class="c-single-button-group">
                     <div>
                         <button type="submit" class="btn-dark">
                             {{ __('Login') }}
                         </button>
                         <div class="c-link__under-button">
-                            @if (Route::has('password.request'))
-                            <a href="{{ route('password.request') }}">
-                                {{ __('パスワードをお忘れの方') }}
-                            </a>
-                            @endif
+                            <!-- @if (Route::has('password.request')) -->
+                            <div class="c-link__under-button__link">
+                                <a href="{{ route('password.request') }}">
+                                    {{ __('Foggot Password') }}
+                                </a>
+                            </div>
+                            <!-- @endif -->
+                            <div class="c-link__under-button__link">
+                                <a href="{{ route('register') }}">
+                                    {{ __('register') }}
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
