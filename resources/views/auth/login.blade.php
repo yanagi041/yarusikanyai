@@ -48,14 +48,12 @@
             </div>
 
             <div class="c-form__group">
-                <div>
-                    <div class="form-check">
-                        <label class="form-check-label" for="remember">
+                <div class="form-check">
+                    <label class="form-check-label" for="remember">
 
-                            <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                            <span>{{ __('ログイン情報を記憶') }}</span>
-                        </label>
-                    </div>
+                        <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        <span>{{ __('ログイン情報を記憶') }}</span>
+                    </label>
                 </div>
             </div>
 
