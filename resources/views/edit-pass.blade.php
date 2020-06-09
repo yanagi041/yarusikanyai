@@ -1,21 +1,64 @@
 @extends('layouts.app')
 
-@section('title','ユーザー情報変更')
+@section('title','パスワード変更')
 
 @section('header')
 <header-component></header-component>
 @endsection
 
 @section('content')
-<div class="p-profile">
-    <h2>ユーザー情報変更</h2>
-    <div class="p-profile-links">
-        <div class="c-link__under-button">
-            <a href="{{ route('edit-email') }}">メールアドレス変更</a>
+
+<div class="p-register">
+
+    <h2>{{ __('Change Password') }}</h2>
+    <div class="c-form">
+        @if(session('change_password_error'))
+        <div class="c-form__error">
+            {{ session('change_password_error') }}
         </div>
-        <div class="c-link__under-button">
-            <a href="{{ route('edit-pass') }}">パスワード変更</a>
-        </div>
+        @endif
+
+        <form method="POST" action="{{ route('change.password') }}">
+            @csrf
+
+            <div class="c-form__group">
+                <label for="current">{{ __('Password__current')
+                    }}</label>
+                <input id="current" type="password" placeholder="パスワード" name="current-password" required autofocus>
+            </div>
+
+            <div class="c-form__group">
+                <label for="password">{{ __('Password')
+                    }}</label>
+                <input id="password" type="password" placeholder="パスワード" name="new-password" required autofocus>
+            </div>
+
+            <div class="c-form__group">
+                <label for="confirm">{{ __('Password__re')
+                    }}</label>
+                <input id="confirm" type="password" placeholder="パスワード再入力" name="new-password_confirmation" required
+                    autofocus>
+            </div>
+
+            @error('new-password')
+            <p class="c-form__error">
+                <strong>{{ $message }}</strong>
+            </p>
+            @enderror
+
+            @error('new-password_confirmation')
+            <p class="c-form__error">
+                <strong>{{ $message }}</strong>
+            </p>
+            @enderror
+
+            <div class="c-form__group">
+                <div class="c-single-button-group">
+                    <button type="submit" class="btn-dark">{{ __('Change') }}</button>
+                </div>
+            </div>
+
+        </form>
     </div>
 </div>
 @endsection

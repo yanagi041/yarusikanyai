@@ -598,6 +598,16 @@ input[type=checkbox]:checked + span::before {
   }
 }
 
+.pc {
+  display: block;
+}
+
+@media screen and (max-width: 559px) {
+  .pc {
+    display: none;
+  }
+}
+
 .pagination {
   bottom: 0px;
   display: flex;
@@ -676,14 +686,14 @@ input[type=checkbox]:checked + span::before {
   width: 45px;
 }
 
-.l-header__menu {
+.l-header__spmenu {
   position: fixed;
   right: 0;
   top: 0;
   width: 60px;
 }
 
-.l-header__menu__line {
+.l-header__spmenu__line {
   cursor: pointer;
   height: 30px;
   margin-left: auto;
@@ -693,7 +703,7 @@ input[type=checkbox]:checked + span::before {
   width: 36px;
 }
 
-.l-header__menu__line span {
+.l-header__spmenu__line span {
   background: #333;
   border-radius: 6px;
   display: block;
@@ -703,34 +713,51 @@ input[type=checkbox]:checked + span::before {
   width: 100%;
 }
 
-.l-header__menu__line span:first-child {
+.l-header__spmenu__line span:first-child {
   top: 0;
 }
 
-.l-header__menu__line span:nth-child(2) {
+.l-header__spmenu__line span:nth-child(2) {
   top: 13px;
 }
 
-.l-header__menu__line span:last-child {
+.l-header__spmenu__line span:last-child {
   bottom: 0;
 }
 
-.l-header__menu__line.active span {
+.l-header__spmenu__line.active span {
   transition: 0.6s;
 }
 
-.l-header__menu__line.active span:first-child {
+.l-header__spmenu__line.active span:first-child {
   top: 50%;
   transform: rotate(45deg);
 }
 
-.l-header__menu__line.active span:nth-child(2) {
+.l-header__spmenu__line.active span:nth-child(2) {
   opacity: 0;
 }
 
-.l-header__menu__line.active span:last-child {
+.l-header__spmenu__line.active span:last-child {
   top: 50%;
   transform: rotate(-45deg);
+}
+
+.l-header__menu {
+  margin: 0 10px;
+  position: absolute;
+  right: 0;
+}
+
+.l-header__menu__list {
+  color: white;
+  display: flex;
+  font-size: 15px;
+  list-style-type: none;
+}
+
+.l-header__menu__list li {
+  margin: 0 10px;
 }
 
 .navi {
@@ -789,11 +816,19 @@ input[type=checkbox]:checked + span::before {
 .l-footer {
   align-items: center;
   background: #aaa;
+  color: white;
   display: flex;
+  font-size: 1.6rem;
   height: 30px;
   justify-content: center;
-  padding: 10px;
+  padding: 15px;
   width: 100%;
+}
+
+@media screen and (max-width: 559px) {
+  .l-footer {
+    font-size: inherit;
+  }
 }
 
 .l-footer-light {

@@ -101,6 +101,14 @@ input[type=checkbox]:checked + span::before {
 	}
 }
 
+//PC用
+.pc {
+	display: block;
+	@include mq() {
+		display: none;
+	}
+}
+
 //ページネーション
 .pagination {
 	bottom: 0px;

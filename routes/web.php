@@ -14,13 +14,14 @@ use Illuminate\Support\Facades\Auth;
 
 //authで作られたコントローラー
 Route::get('/', function () {
-    return view('welcome');
+    return view('mypage');
 });
 
 Auth::routes();
 
 Route::get('/mypage', 'HomeController@index')->name('mypage');
 Route::get('/', 'HomeController@index')->name('mypage');
+
 
 //ログイン必要
 Route::group(['middleware' => 'auth'], function () {
@@ -30,15 +31,19 @@ Route::group(['middleware' => 'auth'], function () {
     //ユーザー周り
     Route::get('/profile', 'HomeController@profile')->name('profile');
     Route::get('/edit-email', 'HomeController@editEmail')->name('edit-email');
+    Route::post('/change-email', 'HomeController@changeEmail')->name('change-email');
     Route::get('/edit-pass', 'HomeController@editPass')->name('edit-pass');
+    Route::post('/change-password', 'HomeController@changePassword')->name('change.password');
+
     Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
    
+
     //tasks周り
     Route::post('/tasks', 'TasksController@new')->name('tasks.create');
     Route::get('/tasks/new', 'TasksController@new')->name('tasks.new');
     Route::post('/tasks/new', 'TasksController@create')->name('tasks.create');
     Route::get('/tasks/{id}/edit', 'TasksController@edit')->name('tasks.edit');
-    Route::post('/tasks/{id}/edit', 'TasksController@update')->name('tasks.update');
+    Route::post('/tasks/{id}/update', 'TasksController@update')->name('tasks.update');
     Route::post('/tasks/{id}/delete', 'TasksController@delete')->name('tasks.delete');
     Route::get('/tasks/{id}/prepare', 'TasksController@prepare')->name('tasks.prepare');
     Route::post('/tasks/{id}/start', 'TasksController@start')->name('tasks.start');

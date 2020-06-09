@@ -1,5 +1,7 @@
 <template>
-  <footer class="l-footer"></footer>
+  <footer class="l-footer">
+    <p>©Copyright2019 やるしかニャい.All Rights Reserved</p>
+  </footer>
 </template>
 
 <script>

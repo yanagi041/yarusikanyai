@@ -23,10 +23,11 @@
                         value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                     @error('email')
-                    <span class="invalid-feedback" role="alert">
+                    <p class="c-form__error">
                         <strong>{{ $message }}</strong>
-                    </span>
+                    </p>
                     @enderror
+
                 </div>
             </div>
 
@@ -40,9 +41,9 @@
                         autocomplete="current-password">
 
                     @error('password')
-                    <span class="invalid-feedback" role="alert">
+                    <p class="c-form__error">
                         <strong>{{ $message }}</strong>
-                    </span>
+                    </p>
                     @enderror
                 </div>
             </div>
@@ -73,7 +74,7 @@
                             <!-- @endif -->
                             <div class="c-link__under-button__link">
                                 <a href="{{ route('register') }}">
-                                    {{ __('register') }}
+                                    {{ __('Signup') }}
                                 </a>
                             </div>
                         </div>
@@ -84,4 +85,9 @@
         </form>
     </div>
 </div>
+@endsection
+
+@section('footer')
+<footer-component>
+</footer-component>
 @endsection

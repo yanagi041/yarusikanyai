@@ -42,11 +42,9 @@ class TasksController extends Controller
         }
     }
 
-    //あとで確認
+    //タスク作成
     public function create(CreateTaskRequest $request)
     {
-        //バリデーションはフォームリクエスト側で行う
-        
         Log::debug('バリデーションOK');
         //モデルのインスタンス作成
         $task = new Task;
@@ -92,7 +90,7 @@ class TasksController extends Controller
         }
 
         Task::find($id)->fill($request->all())->save();
-        return redirect('/mypage')->with('flash_message', __(('Registered!')));
+        return redirect('/mypage')->with('flash_message', __(('Changed!')));
     }
 
     //タスク実行前の確認
@@ -191,11 +189,11 @@ class TasksController extends Controller
         // $tasks = Task::latest('updated_at')->where('is_finished', '1')->paginate(5);
 
         $totalBigtask = Auth::user()->tasks('title')->where('is_finished', '1')->count();
-        $totalSmalltask0 = Task::select('task0')->whereNotNull('task0')->where('is_finished', '1')->count();
-        $totalSmalltask1 = Task::select('task1')->whereNotNull('task1')->where('is_finished', '1')->count();
-        $totalSmalltask2 = Task::select('task2')->whereNotNull('task2')->where('is_finished', '1')->count();
-        $totalSmalltask3 = Task::select('task3')->whereNotNull('task3')->where('is_finished', '1')->count();
-        $totalSmalltask4 = Task::select('task4')->whereNotNull('task4')->where('is_finished', '1')->count();
+        $totalSmalltask0 = Auth::user()->tasks('task0')->whereNotNull('task0')->where('is_finished', '1')->count();
+        $totalSmalltask1 = Auth::user()->tasks('task1')->whereNotNull('task1')->where('is_finished', '1')->count();
+        $totalSmalltask2 = Auth::user()->tasks('task2')->whereNotNull('task2')->where('is_finished', '1')->count();
+        $totalSmalltask3 = Auth::user()->tasks('task3')->whereNotNull('task3')->where('is_finished', '1')->count();
+        $totalSmalltask4 = Auth::user()->tasks('task4')->whereNotNull('task4')->where('is_finished', '1')->count();
         $totalSmalltask = (int)($totalSmalltask0 + $totalSmalltask1 + $totalSmalltask2 + $totalSmalltask3 + $totalSmalltask4);
 
         return view('tasks.history', ['tasks' => $tasks, 'totalBigtask' => $totalBigtask, 'totalSmalltask' => $totalSmalltask]);

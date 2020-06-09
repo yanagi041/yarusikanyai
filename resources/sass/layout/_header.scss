@@ -21,7 +21,7 @@
 			width: 45px;
 		}
 	}
-	&__menu {
+	&__spmenu {
 		position: fixed;
 		right: 0;
 		top: 0;
@@ -67,6 +67,20 @@
 						transform: rotate(-45deg);
 					}
 				}
+			}
+		}
+	}
+	&__menu {
+		margin: 0 10px;
+		position: absolute;
+		right: 0;
+		&__list {
+			color: white;
+			display: flex;
+			font-size: $space_l;
+			list-style-type: none;
+			li {
+				margin: 0 10px;
 			}
 		}
 	}

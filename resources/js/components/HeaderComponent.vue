@@ -6,10 +6,30 @@
       </h1>
     </div>
 
-    <!-- https://www.markernet.co.jp/blog/2019/08/19/vue-js-hamburger-menu/ -->
     <div class="l-header__menu">
+      <div class="pc">
+        <div>
+          <div class="l-header__menu__list" v-if="this.authcheck">
+            <li>
+              <a href="mypage">マイページ</a>
+            </li>
+            <li>
+              <a href="logout">ログアウト</a>
+            </li>
+          </div>
+          <div class="l-header__menu__list" v-else>
+            <li>
+              <a href="logout">ログイン</a>
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- https://www.markernet.co.jp/blog/2019/08/19/vue-js-hamburger-menu/ -->
+    <div class="l-header__spmenu">
       <div class="sp">
-        <div class="l-header__menu__line" @click="naviOpen" :class="{'active': active}">
+        <div class="l-header__spmenu__line" @click="naviOpen" :class="{'active': active}">
           <span></span>
           <span></span>
           <span></span>
@@ -17,9 +37,7 @@
         <transition name="navi">
           <nav class="navi" v-show="navi">
             <ul class="navi__wrap">
-              <li>
-                <a href="logout">ログアウト</a>
-              </li>
+              <li v-on:click="doLogout">ログアウト</li>
               <li>
                 <a href="#">BBB</a>
               </li>

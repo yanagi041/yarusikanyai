@@ -1,22 +1,46 @@
 @extends('layouts.app')
 
-@section('title','ユーザー情報変更')
+@section('title','メールアドレス変更')
 
 @section('header')
 <header-component></header-component>
 @endsection
 
 @section('content')
-<div class="p-profile">
-    <h2>ユーザー情報変更</h2>
-    <div class="p-profile-links">
-        <div class="c-link__under-button">
-            <a href="{{ route('edit-email') }}">メールアドレス変更</a>
-        </div>
-        <div class="c-link__under-button">
-            <a href="{{ route('edit-pass') }}">パスワード変更</a>
-        </div>
+
+<div class="p-register">
+
+    <h2>{{ __('Change Email') }}</h2>
+    <div class="c-form">
+        <form method="POST" action="{{ route('change-email') }}">
+            @csrf
+
+            <div class="c-form__group">
+                <label for="email">{{ __('E-Mail Address')
+                    }}</label>
+                <div>
+                    <input id="email" type="email" placeholder="メールアドレス" name="email" value="{{ $user['email'] }}"
+                        required autocomplete="email" autofocus>
+
+                    @error('email')
+                    <p class="c-form__error">
+                        <strong>{{ $message }}</strong>
+                    </p>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="c-form__group">
+                <div class="c-single-button-group">
+                    <button type="submit" class="btn-dark">{{ __('Change') }}</button>
+                </div>
+
+        </form>
+
+
     </div>
+
+</div>
 </div>
 @endsection
 

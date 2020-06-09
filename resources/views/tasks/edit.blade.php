@@ -8,10 +8,11 @@
 
 @section('content')
 <div class="p-tasks-new">
-    <h2>タスク編集　</h2>
+    <h2>タスク編集</h2>
     <div class="c-form">
         <form method="POST" action="{{ route('tasks.update', $task->id) }}">
             @csrf
+
             <!-- 大タスク -->
             <div class="p-single-task">
                 <label for="title">{{ __('Big Task') }}</label>
@@ -59,6 +60,7 @@
             <button type="submit" class="btn-light">{{ __('Register') }}</button>
         </div>
     </div>
+
     </form>
 
 </div>

@@ -5,10 +5,15 @@
 .l-footer {
 	align-items: center;
 	background: $color-dark;
+	color: white;
 	display: flex;
+	font-size: $font-size_m;
 	height: 30px;
+	@include mq("md") {
+		font-size: inherit;
+	}
 	justify-content: center;
-	padding: $space_m;
+	padding: $space_l;
 	width: 100%;
 }
 

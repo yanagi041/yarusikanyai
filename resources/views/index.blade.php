@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
+@section('title','ホーム')
+
+@section('header')
+<header-component></header-component>
+@endsection
+
 @section('content')
-<example-component>
-    <example-component>
-        @endsection
+@endsection
+
+@section('footer')
+<footer-component></footer-component>
+@endsection
