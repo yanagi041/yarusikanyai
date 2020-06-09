@@ -3,7 +3,8 @@
 @section('title','パスワード変更')
 
 @section('header')
-<header-component></header-component>
+<header-component v-bind:authcheck="@auth true @endauth @guest false @endguest" v-bind:logout="'{{route('logout')}}'">
+</header-component>
 @endsection
 
 @section('content')
@@ -22,15 +23,15 @@
             @csrf
 
             <div class="c-form__group">
-                <label for="current">{{ __('Password__current')
+                <label for="current">{{ __('Password__Current')
                     }}</label>
                 <input id="current" type="password" placeholder="パスワード" name="current-password" required autofocus>
             </div>
 
             <div class="c-form__group">
-                <label for="password">{{ __('Password')
+                <label for="password">{{ __('Password__New')
                     }}</label>
-                <input id="password" type="password" placeholder="パスワード" name="new-password" required autofocus>
+                <input id="password" type="password" placeholder="新しいパスワード" name="new-password" required autofocus>
             </div>
 
             <div class="c-form__group">

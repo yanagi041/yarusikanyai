@@ -19,21 +19,22 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/mypage', 'HomeController@index')->name('mypage');
-Route::get('/', 'HomeController@index')->name('mypage');
+Route::get('/mypage', 'TasksController@index')->name('mypage');
+Route::get('/', 'TasksController@index')->name('index');
+Route::get('/home', 'TasksController@index')->name('index');
+Route::get('/index', 'TasksController@index')->name('index');
 
 
 //ログイン必要
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/', 'TasksController@mypage')->name('mypage');
     Route::get('/mypage', 'TasksController@mypage')->name('mypage');
 
     //ユーザー周り
-    Route::get('/profile', 'HomeController@profile')->name('profile');
-    Route::get('/edit-email', 'HomeController@editEmail')->name('edit-email');
-    Route::post('/change-email', 'HomeController@changeEmail')->name('change-email');
-    Route::get('/edit-pass', 'HomeController@editPass')->name('edit-pass');
-    Route::post('/change-password', 'HomeController@changePassword')->name('change.password');
+    Route::get('/profile', 'TasksController@profile')->name('profile');
+    Route::get('/edit-email', 'TasksController@editEmail')->name('edit-email');
+    Route::post('/change-email', 'TasksController@changeEmail')->name('change-email');
+    Route::get('/edit-pass', 'TasksController@editPass')->name('edit-pass');
+    Route::post('/change-password', 'TasksController@changePassword')->name('change.password');
 
     Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
    

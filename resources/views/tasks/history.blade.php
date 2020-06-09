@@ -3,12 +3,13 @@
 @section('title','タスク作成')
 
 @section('header')
-<header-component class="l-header-light"></header-component>
+<header-component class="l-header-light" v-bind:authcheck="@auth true @endauth @guest false @endguest"
+    v-bind:logout="'{{route('logout')}}'"></header-component>
 @endsection
 
 @section('content')
 <div class="p-tasks-history">
-    <h2>達成したタスク</h2>
+    <h2>達成したこと</h2>
     <div class="p-tasks-history__lists">
 
         <!-- タスクリスト -->

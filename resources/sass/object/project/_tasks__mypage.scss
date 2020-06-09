@@ -2,6 +2,9 @@
 	&__notask {
 		padding-top: $space_5l;
 		text-align: center;
+		img {
+			max-width: 450px;
+		}
 		p {
 			font-size: $font-size_l;
 		}

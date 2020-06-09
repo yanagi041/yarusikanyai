@@ -41649,7 +41649,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "logo" }, [
-      _c("h1", [_c("a", { attrs: { href: "/" } }, [_vm._v("やるしかニャい")])])
+      _c("h1", [
+        _c("a", { attrs: { href: "/mypage" } }, [_vm._v("やるしかニャい")])
+      ])
     ])
   },
   function() {
@@ -41657,7 +41659,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("li", [
-      _c("a", { attrs: { href: "mypage" } }, [_vm._v("マイページ")])
+      _c("a", { attrs: { href: "/mypage" } }, [_vm._v("マイページ")])
     ])
   },
   function() {
@@ -41665,7 +41667,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("li", [
-      _c("a", { attrs: { href: "logout" } }, [_vm._v("ログアウト")])
+      _c("a", { attrs: { href: "/logout" } }, [_vm._v("ログアウト")])
     ])
   },
   function() {
@@ -41673,7 +41675,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("li", [
-      _c("a", { attrs: { href: "logout" } }, [_vm._v("ログイン")])
+      _c("a", { attrs: { href: "/login" } }, [_vm._v("ログイン")])
     ])
   }
 ]

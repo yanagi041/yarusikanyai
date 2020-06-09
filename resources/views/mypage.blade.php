@@ -4,7 +4,7 @@
 
 @section('header')
 <header-component v-bind:authcheck="@auth true @endauth @guest false @endguest" v-bind:logout="'{{route('logout')}}'"
-    v-bind:user="{{$user}}"></header-component>></header-component>
+    v-bind:user="{{$user}}"></header-component>
 @endsection
 
 @section('content')
@@ -18,7 +18,8 @@
 
     @if ($tasks->isEmpty())
     <div class="p-tasks-mypage__notask">
-        <p>現在登録しているタスクはありません</p>
+        <img src="/img/nodata.png" alt="nodata">
+        <p>登録中のタスクはありません</p>
     </div>
     @endif
 

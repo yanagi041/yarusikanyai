@@ -548,6 +548,11 @@ h3 {
   font-size: 1.8rem;
 }
 
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
 input[type=text],
 input[type=password],
 input[type=email] {
@@ -1008,6 +1013,18 @@ button:hover {
   display: flex;
 }
 
+.p-index__hero {
+  text-align: center;
+}
+
+.p-index__hero img {
+  max-width: 450px;
+}
+
+.p-index__hero p {
+  font-size: 2.4rem;
+}
+
 .p-login {
   width: 100%;
 }
@@ -1059,6 +1076,10 @@ button:hover {
   text-align: center;
 }
 
+.p-tasks-mypage__notask img {
+  max-width: 450px;
+}
+
 .p-tasks-mypage__notask p {
   font-size: 1.8rem;
 }
@@ -1092,5 +1113,13 @@ button:hover {
   padding: 10px 20px;
   width: 100%;
   margin: 0 auto;
+}
+
+/* ---------------------------------
+u-
+--------------------------------- */
+
+.u-textalign-center {
+  text-align: center;
 }
 

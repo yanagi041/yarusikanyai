@@ -2,7 +2,7 @@
   <header class="l-header">
     <div class="logo">
       <h1>
-        <a href="/">やるしかニャい</a>
+        <a href="/mypage">やるしかニャい</a>
       </h1>
     </div>
 
@@ -11,15 +11,15 @@
         <div>
           <div class="l-header__menu__list" v-if="this.authcheck">
             <li>
-              <a href="mypage">マイページ</a>
+              <a href="/mypage">マイページ</a>
             </li>
             <li>
-              <a href="logout">ログアウト</a>
+              <a href="/logout">ログアウト</a>
             </li>
           </div>
           <div class="l-header__menu__list" v-else>
             <li>
-              <a href="logout">ログイン</a>
+              <a href="/login">ログイン</a>
             </li>
           </div>
         </div>

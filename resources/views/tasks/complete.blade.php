@@ -3,7 +3,8 @@
 @section('title','タスク作成')
 
 @section('header')
-<header-component class="l-header-light"></header-component>
+<header-component class="l-header-light" v-bind:authcheck="@auth true @endauth @guest false @endguest"
+    v-bind:logout="'{{route('logout')}}'" ></header-component>
 @endsection
 
 

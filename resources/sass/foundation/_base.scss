@@ -16,21 +16,6 @@ body, html {
 	width: 100%;
 }
 
-
-// p,
-// a {
-//   font-family: $font-family_default;
-// }
-
-// a {
-//   color: $font-color_link;
-//   text-decoration: none;
-// }
-
-// img {
-//   vertical-align: bottom;
-// }
-
 h1 {
 	font-size: $font-size_4l;
 }
@@ -43,6 +28,10 @@ h3 {
 	font-size: $font-size_l;
 }
 
+img {
+	max-height: 100%;
+	max-width: 100%;
+}
 
 // h3 {
 //   font-size: $font-size_3l;

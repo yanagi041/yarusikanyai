@@ -5,6 +5,8 @@
     "Changed Password": "パスワードを変更しました",
     "Foggot Password": "パスワードをお忘れの方",
     "Reset Password": "パスワードリセット",
+    "Password__Current": "現在のパスワード",
+    "Password__New": "新しいパスワード",
     "E-Mail Address": "メールアドレス",
     "Change Email": "メールアドレス変更",
     "Changed Email": "メールアドレスを変更しました",

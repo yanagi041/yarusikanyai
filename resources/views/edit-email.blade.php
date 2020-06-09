@@ -3,7 +3,8 @@
 @section('title','メールアドレス変更')
 
 @section('header')
-<header-component></header-component>
+<header-component v-bind:authcheck="@auth true @endauth @guest false @endguest" v-bind:logout="'{{route('logout')}}'">
+</header-component>
 @endsection
 
 @section('content')
