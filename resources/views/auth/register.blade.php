@@ -7,7 +7,7 @@
 @section('content')
 <div class="p-register">
 
-    <h2>{{ __('register') }}</h2>
+    <h2>{{ __('Signup') }}</h2>
     <div class="c-form">
         <form method="POST" action="{{ route('register') }}">
             @csrf
