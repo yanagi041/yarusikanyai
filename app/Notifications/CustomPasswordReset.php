@@ -44,9 +44,10 @@ class CustomPasswordReset extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject(__('Reset Password'))
-            ->view('emails.reset')
-            ->action(__('Reset Password'), url('password/reset', $this->token));
+            ->subject('パスワードの再発行')
+            ->line('パスワード再発行のリクエストを受け付けました')
+            ->action('パスワードを再発行する', route('password.reset', $this->token))
+            ->line('このメールに心当たりがない場合は、このメールを削除していただきますようお願い申し上げます。');
     }
 
     /**

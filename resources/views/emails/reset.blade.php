@@ -1,10 +1,16 @@
 <h3>
-    <a href="{{ config('app.url') }}">{{ config('app.name') }}</a>
+    <a href="https://gi-yana.com/yarusikanyai">やるしかニャい</a>
 </h3>
 <p>
-    {{ __('Click link below and reset password.') }}<br>
-    {{ __('If you did not request a password reset, no further action is required.') }}
+    以下のリンクをクリックして、パスワードをリセットしてください。<br>
+    このメールに心当たりがない場合は、このメールを削除していただきますようお願い申し上げます。
 </p>
 <p>
     {{ $actionText }}: <a href="{{ $actionUrl }}">{{ $actionUrl }}</a>
+</p>
+<p>
+    ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝<br>
+    やるしかニャイ運営
+
+    Email:giyana041@gmail.com
 </p>
