@@ -23,9 +23,9 @@ class PasswordResetNotification extends ResetPassword
         }
 
         return (new MailMessage)
-            ->subject('パスワードの再発行')
-            ->line('パスワード再発行のリクエストを受け付けました')
-            ->action('パスワードを再発行する', route('password.reset', $this->token))
-            ->line('このメールに心当たりがない場合は、このメールを削除していただきますようお願い申し上げます。');
+                    ->subject('パスワードリセット通知')
+                    ->view('emails.password_reset', [
+                        'reset_url' => url(config('app.url').route('password.reset', ['token' => $this->token, 'email' => $notifiable->getEmailForPasswordReset()], false))
+                    ]);
     }
 }

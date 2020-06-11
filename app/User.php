@@ -41,8 +41,7 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Task');
     }
-
-
+    
     /**
      * Override to send for password reset notification.
      *
