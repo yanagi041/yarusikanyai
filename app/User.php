@@ -5,7 +5,6 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\Notifications\CustomPasswordReset;
 
 class User extends Authenticatable
 {
@@ -45,13 +44,13 @@ class User extends Authenticatable
 
 
     /**
-     * パスワードリセット通知の送信
+     * Override to send for password reset notification.
      *
-     * @param  string  $token
+     * @param [type] $token
      * @return void
      */
     public function sendPasswordResetNotification($token)
     {
-        $this->notify(new CustomPasswordReset($token));
+        $this->notify(new PasswordResetNotification($token));
     }
 }
