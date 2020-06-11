@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://gi-yana.com/portfolio/yarusikanyai/
+    'url' => env('APP_URL', 'http://yarusikanyai.gi-yana.com
 '),
 
     'asset_url' => env('ASSET_URL', null),

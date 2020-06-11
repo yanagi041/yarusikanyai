@@ -1,6 +1,7 @@
 {
     "Password": "パスワード",
     "Password__re": "パスワード再入力",
+    "Confirm Password": "パスワード再入力",
     "Change Password": "パスワード変更",
     "Changed Password": "パスワードを変更しました",
     "Foggot Password": "パスワードをお忘れの方",
