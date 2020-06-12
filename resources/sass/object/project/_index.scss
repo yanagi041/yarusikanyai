@@ -2,6 +2,9 @@
 	&__hero {
 		text-align: center;
 		img {
+			@include mq("md") {
+				max-width: 100%;
+			}
 			max-width: 450px;
 		}
 		p {

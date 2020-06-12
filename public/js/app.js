@@ -2077,6 +2077,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "HeaderComponent",
   data: function data() {
@@ -41573,15 +41581,17 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "l-header__menu" }, [
       _c("div", { staticClass: "pc" }, [
-        _c("div", [
-          this.authcheck
-            ? _c("div", { staticClass: "l-header__menu__list" }, [
+        this.authcheck
+          ? _c("div", { staticClass: "l-header__menu__list" }, [
+              _c("ul", [
                 _vm._m(1),
                 _vm._v(" "),
-                _vm._m(2)
+                _c("li", { on: { click: _vm.doLogout } }, [
+                  _vm._v("ログアウト")
+                ])
               ])
-            : _c("div", { staticClass: "l-header__menu__list" }, [_vm._m(3)])
-        ])
+            ])
+          : _c("div", { staticClass: "l-header__menu__list" }, [_vm._m(2)])
       ])
     ]),
     _vm._v(" "),
@@ -41615,24 +41625,36 @@ var render = function() {
                 staticClass: "navi"
               },
               [
-                _c("ul", { staticClass: "navi__wrap" }, [
-                  _c("li", { on: { click: _vm.doLogout } }, [
-                    _vm._v("ログアウト")
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "#" } }, [_vm._v("BBB")])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "#" } }, [_vm._v("CCC")])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "#" } }, [_vm._v("DDD")])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("EEE")])])
+                _c("div", { staticClass: "navi__wrap" }, [
+                  this.authcheck
+                    ? _c("div", { staticClass: "l-header__menu__list" }, [
+                        _c("ul", [
+                          _c("li", [
+                            _c("a", { attrs: { href: "/mypage" } }, [
+                              _vm._v("マイページ")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { on: { click: _vm.doLogout } }, [
+                            _vm._v("ログアウト")
+                          ])
+                        ])
+                      ])
+                    : _c("div", { staticClass: "l-header__menu__list" }, [
+                        _c("ul", [
+                          _c("li", [
+                            _c("a", { attrs: { href: "/login" } }, [
+                              _vm._v("ログイン")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("li", [
+                            _c("a", { attrs: { href: "/register" } }, [
+                              _vm._v("新規登録")
+                            ])
+                          ])
+                        ])
+                      ])
                 ])
               ]
             )
@@ -41666,16 +41688,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("a", { attrs: { href: "/logout" } }, [_vm._v("ログアウト")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("a", { attrs: { href: "/login" } }, [_vm._v("ログイン")])
+    return _c("ul", [
+      _c("li", [_c("a", { attrs: { href: "/login" } }, [_vm._v("ログイン")])]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { attrs: { href: "/register" } }, [_vm._v("新規登録")])
+      ])
     ])
   }
 ]
@@ -57449,15 +57467,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************************************!*\
   !*** ./resources/js/components/HeaderComponent.vue ***!
   \*****************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HeaderComponent_vue_vue_type_template_id_153bfd55___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HeaderComponent.vue?vue&type=template&id=153bfd55& */ "./resources/js/components/HeaderComponent.vue?vue&type=template&id=153bfd55&");
 /* harmony import */ var _HeaderComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HeaderComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/HeaderComponent.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _HeaderComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _HeaderComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -57487,7 +57504,7 @@ component.options.__file = "resources/js/components/HeaderComponent.vue"
 /*!******************************************************************************!*\
   !*** ./resources/js/components/HeaderComponent.vue?vue&type=script&lang=js& ***!
   \******************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

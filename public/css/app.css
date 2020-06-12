@@ -754,6 +754,10 @@ input[type=checkbox]:checked + span::before {
   right: 0;
 }
 
+.l-header__menu ul {
+  display: flex;
+}
+
 .l-header__menu__list {
   color: white;
   display: flex;
@@ -776,7 +780,7 @@ input[type=checkbox]:checked + span::before {
 
 .navi__wrap {
   background: #4b4b4b;
-  height: calc(100% - 135px);
+  height: calc(100% - 123px);
   list-style-type: none;
   min-width: 320px;
   padding: 60px 0;
@@ -1019,6 +1023,12 @@ button:hover {
 
 .p-index__hero img {
   max-width: 450px;
+}
+
+@media screen and (max-width: 559px) {
+  .p-index__hero img {
+    max-width: 100%;
+  }
 }
 
 .p-index__hero p {

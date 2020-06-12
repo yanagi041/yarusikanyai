@@ -8,20 +8,23 @@
 
     <div class="l-header__menu">
       <div class="pc">
-        <div>
-          <div class="l-header__menu__list" v-if="this.authcheck">
+        <div class="l-header__menu__list" v-if="this.authcheck">
+          <ul>
             <li>
               <a href="/mypage">マイページ</a>
             </li>
-            <li>
-              <a href="/logout">ログアウト</a>
-            </li>
-          </div>
-          <div class="l-header__menu__list" v-else>
+            <li v-on:click="doLogout">ログアウト</li>
+          </ul>
+        </div>
+        <div class="l-header__menu__list" v-else>
+          <ul>
             <li>
               <a href="/login">ログイン</a>
             </li>
-          </div>
+            <li>
+              <a href="/register">新規登録</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -36,21 +39,26 @@
         </div>
         <transition name="navi">
           <nav class="navi" v-show="navi">
-            <ul class="navi__wrap">
-              <li v-on:click="doLogout">ログアウト</li>
-              <li>
-                <a href="#">BBB</a>
-              </li>
-              <li>
-                <a href="#">CCC</a>
-              </li>
-              <li>
-                <a href="#">DDD</a>
-              </li>
-              <li>
-                <a href="#">EEE</a>
-              </li>
-            </ul>
+            <div class="navi__wrap">
+              <div class="l-header__menu__list" v-if="this.authcheck">
+                <ul>
+                  <li>
+                    <a href="/mypage">マイページ</a>
+                  </li>
+                  <li v-on:click="doLogout">ログアウト</li>
+                </ul>
+              </div>
+              <div class="l-header__menu__list" v-else>
+                <ul>
+                  <li>
+                    <a href="/login">ログイン</a>
+                  </li>
+                  <li>
+                    <a href="/register">新規登録</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </nav>
         </transition>
       </div>

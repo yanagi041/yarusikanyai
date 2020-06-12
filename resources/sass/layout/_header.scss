@@ -74,6 +74,9 @@
 		margin: 0 10px;
 		position: absolute;
 		right: 0;
+		ul {
+			display: flex;
+		}
 		&__list {
 			color: white;
 			display: flex;
@@ -95,7 +98,7 @@
 	width: 100%;
 	&__wrap {
 		background: #4b4b4b;
-		height: calc(100% - 135px);
+		height: calc(100% - 123px);
 		list-style-type: none;
 		min-width: 320px;
 		padding: 60px 0;
